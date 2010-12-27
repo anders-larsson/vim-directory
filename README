@@ -1,6 +1,6 @@
 Installation:
 
-    git clone ssh://git.thethundertemplars.com/home/wicla/.vim/ .vim
+    git clone git@git.thethundertemplars.com:vim.git .vim
 
 - Create symlinks:
 
