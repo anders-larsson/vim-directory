@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 filetype on
 filetype plugin on
 filetype indent on
@@ -19,3 +21,4 @@ set ts=2
 set sw=2
 
 inoremap <C-U> <C-G>u<C-U>
+
