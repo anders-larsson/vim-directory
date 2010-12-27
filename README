@@ -20,4 +20,8 @@ Add a new plugin:
     git commit -m "Install vimrepo.vim bundle as a submodule."
 
 
+Spelling files:
+    ftp://ftp.vim.org/pub/vim/runtime/spell/
+    Current date of files: 08/09/2010
+
 Source: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
