@@ -1,12 +1,19 @@
 " Call Pathogen to load all bundled plugins
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-" Load colorscheme
-colorscheme ir_black
 " Enable filetype detection
 filetype on
 filetype plugin on
 filetype indent on
+" Load colorscheme
+colorscheme ir_black
+" Enable syntax
+syntax on
+" If it's a screen do a group of extra commands
+if match($TERM, "screen")!=-1
+  set t_Co=256
+endif
+
 " Disable vi compatibility
 set nocompatible
 " Add ruler (statusbar) with fugitive (git) support
