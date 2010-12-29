@@ -1,6 +1,6 @@
 Installation:
 
-    git clone git@git.thethundertemplars.com:vim.git .vim
+    git clone git://git.thethundertemplars.com/vim.git .vim
 
 - Create symlinks:
 
