@@ -20,9 +20,8 @@ set nocompatible
 set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2 
-" Allow backspacing over ident, end of line and start-of-line
+" Allow backspacing over ident, end of line
 set backspace=indent,eol,start
-
 " No bells on error
 set noerrorbells
 " Use autoindenting on newlines
@@ -40,5 +39,8 @@ set showcmd
 set showmatch
 " Smart case when searching
 set smartcase
+" Line wrapping
+set nowrap
+set linebreak
 
 inoremap <C-U> <C-G>u<C-U>
