@@ -5,13 +5,22 @@ call pathogen#helptags()
 filetype on
 filetype plugin on
 filetype indent on
-" Load colorscheme
-colorscheme ir_black
 " Enable syntax
 syntax on
-" If it's a screen do a group of extra commands
-if match($TERM, "screen")!=-1
+" Colors are different depending on terminal.
+" If $TERM == linux (console) load default colorscheme
+if match($TERM, "linux" )!=-1
+  colorscheme default
+" If $TERM == screen enable 256 colors, set dark background
+" and load ir_black color scheme
+elseif match($TERM, "screen" )!=-1
   set t_Co=256
+  set background=dark
+  colorscheme ir_black
+" If anything else set background to dark and load colorscheme ir_black
+else
+  set background=dark
+  colorscheme ir_black
 endif
 
 " Disable vi compatibility
