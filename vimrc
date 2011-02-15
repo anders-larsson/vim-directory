@@ -52,4 +52,7 @@ set smartcase
 set nowrap
 set linebreak
 
+" bind w!! to do sudo tee %
+cmap w!! w !sudo tee % >/dev/null
+
 inoremap <C-U> <C-G>u<C-U>
