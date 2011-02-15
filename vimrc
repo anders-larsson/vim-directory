@@ -51,6 +51,8 @@ set smartcase
 " Line wrapping
 set nowrap
 set linebreak
+" Keep at least 5 lines above and below cursor
+set scrolloff=5
 
 " bind w!! to do sudo tee %
 cmap w!! w !sudo tee % >/dev/null
