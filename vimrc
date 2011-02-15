@@ -53,6 +53,8 @@ set nowrap
 set linebreak
 " Keep at least 5 lines above and below cursor
 set scrolloff=5
+" Scanwrap on. Continues searching at beginning of file after reaching end.
+set wrapscan
 
 " bind w!! to do sudo tee %
 cmap w!! w !sudo tee % >/dev/null
