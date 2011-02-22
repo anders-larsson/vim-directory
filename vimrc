@@ -39,6 +39,7 @@ set autoindent
 set expandtab
 " Set tabstop and shiftwidth to 2 
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 " Show line numbering
 set number
