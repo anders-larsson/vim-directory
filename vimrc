@@ -60,6 +60,9 @@ set wrapscan
 " bind w!! to do sudo tee %
 cmap w!! w !sudo tee % >/dev/null
 
+" bind jj to exit insert mode
+imap jj <Esc>
+
 " Unbind arrow keys
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
