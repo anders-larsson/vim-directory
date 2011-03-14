@@ -71,3 +71,44 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 inoremap <C-U> <C-G>u<C-U>
+
+" backup settings
+set backup
+
+function InitBackupDir()
+  let separator = "."
+  let parent = $HOME .'/' . separator . 'vim/'
+  let backup = parent . 'backup/'
+  let tmp    = parent . 'swap/'
+  if exists("*mkdir")
+    if !isdirectory(parent)
+    call mkdir(parent)
+  endif
+  if !isdirectory(backup)
+    call mkdir(backup)
+  endif
+  if !isdirectory(tmp)
+    call mkdir(tmp)
+    endif
+  endif
+  let missing_dir = 0
+  if isdirectory(tmp)
+    execute 'set backupdir=' . escape(backup, " ") . "/,."
+  else
+    let missing_dir = 1
+  endif
+  if isdirectory(backup)
+    execute 'set directory=' . escape(tmp, " ") . "/,."
+  else
+    let missing_dir = 1
+  endif
+  if missing_dir
+    echo "Warning: Unable to create backup directories: " . backup ." and " . tmp
+    echo "Try: mkdir -p " . backup
+    echo "and: mkdir -p " . tmp
+    set backupdir=.                 
+    set directory=.
+  endif
+endfunction          
+call InitBackupDir()
+
