@@ -47,7 +47,8 @@ set number
 set showcmd
 " Show matching matching bracket temporarly
 set showmatch
-" Smart case when searching
+" Ignore/Smart case when searching
+set ignorecase 
 set smartcase
 " Line wrapping
 set nowrap
@@ -74,6 +75,11 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 inoremap <C-U> <C-G>u<C-U>
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " backup settings
 set backup
