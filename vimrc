@@ -72,6 +72,17 @@ cmap w!! w !sudo tee % >/dev/null
 " bind jj to exit insert mode
 imap jj <Esc>
 
+" Bind <leader>n to disable search hilight
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+" Bind <leader>s to disable visible tabs,spaces and EOL
+nmap <silent> <leader>s :set nolist!<CR>
+" Bind <leader>f to open NERDTree
+nmap <leader>f :NERDTreeToggle<CR><CR>
+" Add keybinds for vim-fugitive
+nmap <leader>d :Gdiff<CR><C-W>w<CR>
+nmap <leader>s :Gstatus<CR>
+nmap <leader>c :Gcommit<CR>
+
 " Unbind arrow keys
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
