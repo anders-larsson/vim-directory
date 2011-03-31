@@ -60,6 +60,11 @@ set linebreak
 set scrolloff=5
 " Scanwrap on. Continues searching at beginning of file after reaching end.
 set wrapscan
+" Show tabs, spaces of end of lines and end of lines.
+set list
+set listchars=tab:>-,trail:·,eol:$
+" Set leaderkey
+let mapleader = ","
 
 " bind w!! to do sudo tee %
 cmap w!! w !sudo tee % >/dev/null
