@@ -78,10 +78,12 @@ nmap <silent> <leader>n :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
 " Bind <leader>f to open NERDTree
 nmap <leader>f :NERDTreeToggle<CR><CR>
-" Add keybinds for vim-fugitive
-nmap <leader>d :Gdiff<CR><C-W>w<CR>
-nmap <leader>s :Gstatus<CR>
-nmap <leader>c :Gcommit<CR>
+" Keybinds for vim-fugitive
+nmap <leader>gd :Gdiff<CR><C-W>w<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
+" Bind <leader>cd to cd into buffer's dir
+map <leader>cd :cd %:p:h<cr>
 
 " Unbind arrow keys
 inoremap <Up> <NOP>
