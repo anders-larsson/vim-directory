@@ -50,6 +50,9 @@ set showmatch
 " Ignore/Smart case when searching
 set ignorecase 
 set smartcase
+"" Highlight search terms...
+set hlsearch
+set incsearch 
 " Line wrapping
 set nowrap
 set linebreak
