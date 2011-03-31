@@ -37,7 +37,7 @@ set noerrorbells
 set autoindent
 " Expand tabs to spaces
 set expandtab
-" Set tabstop and shiftwidth to 2 
+" Set tabstop and shiftwidth to 2
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -48,11 +48,11 @@ set showcmd
 " Show matching matching bracket temporarly
 set showmatch
 " Ignore/Smart case when searching
-set ignorecase 
+set ignorecase
 set smartcase
 "" Highlight search terms...
 set hlsearch
-set incsearch 
+set incsearch
 " Line wrapping
 set nowrap
 set linebreak
@@ -134,9 +134,9 @@ function InitBackupDir()
     echo "Warning: Unable to create backup directories: " . backup ." and " . tmp
     echo "Try: mkdir -p " . backup
     echo "and: mkdir -p " . tmp
-    set backupdir=.                 
+    set backupdir=.
     set directory=.
   endif
-endfunction          
+endfunction
 call InitBackupDir()
 
