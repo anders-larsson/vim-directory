@@ -55,7 +55,7 @@ set hlsearch
 set incsearch
 " Line wrapping
 set nowrap
-set linebreak
+set nolinebreak
 " Keep at least 5 lines above and below cursor
 set scrolloff=5
 " Scanwrap on. Continues searching at beginning of file after reaching end.
