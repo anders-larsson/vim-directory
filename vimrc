@@ -54,8 +54,12 @@ set smartcase
 set hlsearch
 set incsearch
 " Line wrapping
-set nowrap
-set nolinebreak
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+set textwidth=0
+set wrapmargin=0
+set formatoptions+=l
 " Keep at least 5 lines above and below cursor
 set scrolloff=5
 " Scanwrap on. Continues searching at beginning of file after reaching end.
