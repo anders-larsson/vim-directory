@@ -10,3 +10,6 @@
 [submodule "bundle/vim-smartusline"]
 	path = bundle/vim-smartusline
 	url = https://github.com/molok/vim-smartusline.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
