@@ -22,3 +22,6 @@
 [submodule "syntastic"]
 	path = syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-ident-guides"]
+	path = bundle/vim-ident-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
