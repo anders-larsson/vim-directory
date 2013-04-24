@@ -10,6 +10,9 @@ if has('gui_running')
 else
 	set background=dark
 endif
+" Ensure utf-8 encoding
+scriptencoding utf-8
+set encoding=utf-8
 " Enable filetype detection
 filetype on
 filetype plugin on
@@ -21,7 +24,7 @@ set nocompatible
 " Add ruler (statusbar) with fugitive (git) support
 set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2 
+set laststatus=2
 " Allow backspacing over ident, end of line
 set backspace=indent,eol,start
 " No bells on error
@@ -34,12 +37,10 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-
 " Configure vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
-
 " Show line numbering
 set number
 " Show command in statusbar
@@ -65,23 +66,21 @@ set scrolloff=5
 set wrapscan
 " Show tabs, spaces of end of lines and end of lines.
 set list
-"set listchars=tab:>-,trail:·,eol:$
-set list listchars=tab:·\ ,trail:↜,nbsp:•
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
 " Set leaderkey
 let mapleader = ","
-
 " bind w!! to do sudo tee %
 cmap w!! w !sudo tee % >/dev/null
-
 " bind jj to exit insert mode
 imap jj <Esc>
-
 " Bind <leader>n to disable search hilight
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 " Bind <leader>s to disable visible tabs,spaces and EOL
-nmap <silent> <leader>s :set nolist!<CR>
+nmap <silent> <leader>l :set nolist!<CR>
 " Bind <leader>f to open NERDTree
 nmap <leader>f :NERDTreeToggle<CR><CR>
+" other
+noremap <leader>n :if &number \| set nonumber \| else \| set number \| endif<CR>
 " Keybinds for vim-fugitive
 nmap <leader>gd :Gdiff<CR><C-W>w<CR>
 nmap <leader>gs :Gstatus<CR>
