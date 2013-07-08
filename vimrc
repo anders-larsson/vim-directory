@@ -74,7 +74,7 @@ cmap w!! w !sudo tee % >/dev/null
 " bind jj to exit insert mode
 imap jj <Esc>
 " Bind <leader>n to disable search hilight
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <leader>s :silent :nohlsearch<CR>
 " Bind <leader>s to disable visible tabs,spaces and EOL
 nmap <silent> <leader>l :set nolist!<CR>
 " Bind <leader>f to open NERDTree
