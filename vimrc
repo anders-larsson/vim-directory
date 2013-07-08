@@ -43,6 +43,17 @@ hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 " Show line numbering
 set number
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 " Show command in statusbar
 set showcmd
 " Show matching matching bracket temporarly
