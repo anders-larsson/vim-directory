@@ -70,8 +70,11 @@ set scrolloff=5
 " Scanwrap on. Continues searching at beginning of file after reaching end.
 set wrapscan
 " Show tabs, spaces of end of lines and end of lines.
-set list
-set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
+match LiteralTabs /\s\  /
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+
 " Set leaderkey
 let mapleader = ","
 " bind w!! to do sudo tee %
