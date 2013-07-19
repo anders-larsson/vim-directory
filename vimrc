@@ -35,10 +35,6 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-" Configure vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
 " Show line numbering
 set number
 function! NumberToggle()
