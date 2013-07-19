@@ -2,8 +2,6 @@
 call pathogen#incubate()
 call pathogen#helptags()
 " Configure solarized
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
 colorscheme solarized
 if has('gui_running')
 	set background=light
