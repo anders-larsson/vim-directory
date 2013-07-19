@@ -50,7 +50,7 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-autocmd InsertEnter * :set number
+autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 " Show command in statusbar
 set showcmd
