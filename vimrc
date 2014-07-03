@@ -45,6 +45,8 @@ function! NumberToggle()
   endif
 endfunc
 
+set colorcolumn=80
+
 nnoremap <C-n> :call NumberToggle()<cr>
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
