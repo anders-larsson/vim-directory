@@ -28,3 +28,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/autopep8"]
+	path = bundle/autopep8
+	url = git@github.com:tell-k/vim-autopep8.git
