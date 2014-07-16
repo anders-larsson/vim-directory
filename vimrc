@@ -1,5 +1,5 @@
 " Call Pathogen to load all bundled plugins
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 " Configure solarized
 colorscheme solarized
