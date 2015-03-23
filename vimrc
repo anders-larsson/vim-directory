@@ -114,3 +114,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Browse help pages easier (helpgrep)
+nmap <silent> <RIGHT>           :cnext<CR>
+nmap <silent> <RIGHT><RIGHT>    :cnfile<CR><C-G>
+nmap <silent> <LEFT>            :cprev<CR>
+nmap <silent> <LEFT><LEFT>      :cpfile<CR><C-G>
