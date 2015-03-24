@@ -97,6 +97,8 @@ nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gcommit<CR>
 " Bind <leader>cd to cd into buffer's dir
 map <leader>cd :cd %:p:h<cr>
+" Show only lines which differs in vimdiff
+map <leader>d :set diffopt=filler,context:0<CR>
 
 " Unbind arrow keys
 inoremap <Up> <NOP>
@@ -135,4 +137,3 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
-
