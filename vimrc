@@ -1,3 +1,5 @@
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
 " Call Pathogen to load all bundled plugins
 call pathogen#infect('bundle/{}')
 call pathogen#helptags()
@@ -137,3 +139,13 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
