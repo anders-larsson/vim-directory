@@ -19,6 +19,8 @@ filetype plugin on
 filetype indent on
 " Enable syntax
 syntax on
+" Run Neomake on write
+autocmd! BufWritePost * Neomake
 " Disable vi compatibility
 set nocompatible
 " Add ruler (statusbar) with fugitive (git) support
