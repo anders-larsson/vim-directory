@@ -164,4 +164,6 @@ setlocal spell
 set spelllang=sv,en_gb
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-let g:vimwiki_list = [{'path': '~/.vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+if !empty(glob("~/.vim/local.vimrc"))
+  source ~/.vim/local.vimrc
+endif
